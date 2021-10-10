@@ -21,7 +21,7 @@ if len(s)<k:
   print(-1)
   quit()
 else:
-  for i in range(0,len(s)-k+1):
+  for i in range(len(s)-k+1):
     lst.append(s[i:i+k])
   print(max(lst))  
   
