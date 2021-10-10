@@ -1,0 +1,29 @@
+#python
+#The program must accept an integer N and a digit K as the input. 
+The prg must find the largest possible k-digit integer that can be formed using j=k consecutive digits in N. 
+If there is no such integer, then the prg must print -1 as the o/p.
+#sample input
+    6478414
+    3
+#output
+    841
+sample input
+    1000
+    5
+output
+    -1
+    
+#program
+S=input().strip()
+k=int(input())
+lst=[]
+if len(s)<k:
+  print(-1)
+  quit()
+else:
+  for i in range(0,len(s)-k+1):
+    lst.append(s[i:i+k])
+  print(max(lst))  
+  
+    
+    
