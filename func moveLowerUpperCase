@@ -1,0 +1,34 @@
+/*Write a function 'moveLowerUpperCase' which accepts an argument str representing a string value(without any spaces).
+This func must move all the lower case aplhabets to the beginning and all the upper case alphabets to the end.
+Then the func must return the modified string value as a new string. */
+
+//sample input:
+  50ranGesAretheRe
+//sample output:
+  ranesrethee50GAR
+  
+//program in c-skillrack DC
+char* moveLowerUpperCase(char *str)
+{
+char* s1=(char*)malloc(sizeof(char)*1000);
+char* s2=(char*)malloc(sizeof(char)*1000);
+char* s3=(char*)malloc(sizeof(char)*1000);
+int i=0,j=0,k=0,l=0;
+while(i<strlen(str))
+{
+  char c=str[i];
+  if(islower(c))
+  s1[j++]=c;
+  else if(isupper(c))
+  s2[k++]=c;
+  else
+  s3[l++]=c;
+  i++;
+}
+strcat(s1,s3);
+strcat(s1,s2);
+return s1;
+}
+  
+  
+
