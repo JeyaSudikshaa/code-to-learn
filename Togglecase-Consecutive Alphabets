@@ -1,0 +1,50 @@
+//Skillrack DailyChallenge
+//This code is written using C language
+//The program must accept a string S as the input.
+  The program must toggle the case of the alphabets if 2 or more alphabets of the same case occur consecutively in the string S.
+  Then the program must print the revised string as the output.
+  
+  The length of the input string is:2<=len<=100
+  
+//Sample input and output 
+  input-breadANDjam
+  output-BREADandJAM
+
+  input-SkillRack
+  output-SKILLRACK
+  
+  
+//program  
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+int main()
+{
+char S[101];
+int lower=0,upper=0;
+for(int i=0;i<strlen(S);i++)
+{
+  if(isupper(S[i]))
+  {
+    lower=0;
+    if(upper!=0)
+      S[i]=tolower(S[i]);
+    if(upper==1)
+      S[i-1]=tolower(S[i-1])
+    upper++;
+  }
+  else if(islower(S[i]))
+  {
+    upper=0;
+    if(lower!=0)
+      S[i]=toupper(S[i]);
+    if(lower==1)
+      S[i]=toupper(S[i]);
+    lower++;
+  }
+}
+printf("%s",S);
+return 0;
+}
+
+  
